@@ -1,6 +1,3 @@
-# Reference documents
-*.pdf
-
 # Dependencies
 node_modules/
 

@@ -92,6 +92,9 @@ export const translations = {
     'contact.msg': 'Message',
     'contact.msgPlaceholder': 'How can we help you?',
     'contact.submit': 'Send Message',
+    'contact.sending': 'Sending...',
+    'contact.success': 'Your message has been sent successfully! We will get back to you soon.',
+    'contact.error': 'Something went wrong. Please try again or contact us directly.',
 
     // Footer
     'footer.desc': 'Providing affordable and powerful solutions. Delivering excellence and precision in every project. Building the foundations of tomorrow with advanced engineering.',
@@ -196,6 +199,9 @@ export const translations = {
     'contact.msg': 'الرسالة',
     'contact.msgPlaceholder': 'كيف يمكننا مساعدتك؟',
     'contact.submit': 'إرسال الرسالة',
+    'contact.sending': 'جاري الإرسال...',
+    'contact.success': 'تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.',
+    'contact.error': 'حدث خطأ ما. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة.',
 
     // Footer
     'footer.desc': 'نقدم حلولاً بأسعار معقولة وقوية. نقدم التميز والدقة في كل مشروع. نبني أسس المستقبل بهندسة متقدمة.',
