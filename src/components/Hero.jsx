@@ -32,7 +32,7 @@ const Hero = () => {
             
             <h1 className="text-6xl md:text-8xl font-heading font-black leading-[1.1] mb-8">
               {t('hero.title1')} <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold bg-[length:200%_auto] animate-shimmer">{t('hero.title2')}</span> & <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold bg-[length:200%_auto] animate-shimmer">{t('hero.title2')}</span> <br />
               {t('hero.title3')}
             </h1>
             
