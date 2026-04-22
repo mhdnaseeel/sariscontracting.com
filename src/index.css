@@ -27,12 +27,12 @@
   }
 
   .section-title {
-    @apply text-3xl lg:text-4xl font-black text-[#0B1F3A] mb-4 relative inline-block;
+    @apply text-3xl lg:text-4xl font-black text-brand-navy mb-4 relative inline-block;
   }
 
   .section-title::after {
     content: '';
-    @apply absolute -bottom-3 left-0 w-16 h-1.5 bg-[#D4AF37] rounded-full;
+    @apply absolute -bottom-3 left-0 w-16 h-1.5 bg-brand-gold rounded-full;
   }
 
   .btn {
@@ -40,10 +40,10 @@
   }
   
   .btn-primary {
-    @apply bg-[#D4AF37] text-white hover:bg-transparent hover:text-[#D4AF37] hover:shadow-lg hover:-translate-y-0.5 border-2 border-[#D4AF37];
+    @apply bg-brand-gold text-white hover:bg-transparent hover:text-brand-gold hover:shadow-lg hover:-translate-y-0.5 border-2 border-brand-gold;
   }
   
   .btn-outline {
-    @apply border-2 border-[#0B1F3A] text-[#0B1F3A] hover:bg-[#0B1F3A] hover:text-white hover:shadow-lg hover:-translate-y-0.5;
+    @apply border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white hover:shadow-lg hover:-translate-y-0.5;
   }
 }
