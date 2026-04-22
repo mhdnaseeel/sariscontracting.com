@@ -16,8 +16,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        heading: ['Montserrat', 'sans-serif'],
+        sans: ['Inter', 'IBM Plex Sans Arabic', 'sans-serif'],
+        heading: ['Montserrat', 'IBM Plex Sans Arabic', 'sans-serif'],
       },
       keyframes: {
         shimmer: {

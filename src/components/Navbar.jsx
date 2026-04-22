@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.home'), href: '#home' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   return (
@@ -46,10 +48,10 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
-          <ul className="flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <li key={link.name}>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center space-x-8 rtl:space-x-reverse">
+            {navLinks.map((link, index) => (
+              <li key={index}>
                 <a 
                   href={link.href} 
                   className={`text-sm font-bold uppercase tracking-widest hover:text-brand-gold transition-colors ${isScrolled ? 'text-slate-600' : 'text-gray-200'}`}
@@ -59,24 +61,42 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary">Get a Quote</a>
+          
+          <div className="flex items-center gap-4 border-l border-white/20 pl-4 rtl:border-l-0 rtl:border-r rtl:pl-0 rtl:pr-4">
+            <button 
+              onClick={toggleLanguage}
+              className={`flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-brand-gold transition-colors ${isScrolled ? 'text-slate-600' : 'text-gray-200'}`}
+            >
+              <Globe className="w-4 h-4" />
+              {language === 'en' ? 'عربي' : 'EN'}
+            </button>
+            <a href="#contact" className="btn btn-primary">{t('nav.quote')}</a>
+          </div>
         </div>
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-brand-gold"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={32} /> : <Menu size={32} color={isScrolled ? '#0B1F3A' : '#FFFFFF'} />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <button 
+            onClick={toggleLanguage}
+            className={`flex items-center text-sm font-bold hover:text-brand-gold transition-colors ${isScrolled ? 'text-slate-600' : 'text-gray-200'}`}
+          >
+            <Globe className="w-5 h-5" />
+          </button>
+          <button 
+            className="text-brand-gold"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={32} /> : <Menu size={32} color={isScrolled ? '#0B1F3A' : '#FFFFFF'} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl py-6 border-t border-gray-100 flex flex-col gap-2">
-          {navLinks.map((link) => (
+          {navLinks.map((link, index) => (
             <a 
-              key={link.name}
+              key={index}
               href={link.href} 
               className="block px-6 py-3 text-slate-700 font-bold uppercase text-sm border-b border-gray-50 hover:bg-gray-50 hover:text-brand-gold"
               onClick={() => setMobileMenuOpen(false)}
@@ -84,8 +104,18 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <div className="px-6 mt-4">
-            <a href="#contact" className="btn btn-primary w-full text-center" onClick={() => setMobileMenuOpen(false)}>Get a Quote</a>
+          <div className="px-6 mt-4 flex flex-col gap-4">
+            <button 
+              onClick={() => {
+                toggleLanguage();
+                setMobileMenuOpen(false);
+              }}
+              className="flex items-center justify-center gap-2 w-full py-3 border-2 border-brand-navy text-brand-navy font-bold uppercase text-sm rounded-md hover:bg-brand-navy hover:text-white transition-colors"
+            >
+              <Globe className="w-4 h-4" />
+              {language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
+            </button>
+            <a href="#contact" className="btn btn-primary w-full text-center" onClick={() => setMobileMenuOpen(false)}>{t('nav.quote')}</a>
           </div>
         </div>
       )}

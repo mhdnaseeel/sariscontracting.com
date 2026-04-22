@@ -2,23 +2,26 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Target, Gem, ShieldCheck } from 'lucide-react';
 import Stats from './Stats';
+import { useLanguage } from '../context/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: <Target className="w-12 h-12 text-brand-gold" />,
-      title: "Our Mission",
-      desc: "Providing optimum service and premium products to our clients with efficient and conducive effort, aiming to bring about healthy relationships."
+      title: t('about.missionTitle'),
+      desc: t('about.missionDesc')
     },
     {
       icon: <Gem className="w-12 h-12 text-brand-gold" />,
-      title: "Our Values",
-      desc: "We strongly believe that core values are the base of every company and their performance on the job, impacting every notable work we output."
+      title: t('about.valuesTitle'),
+      desc: t('about.valuesDesc')
     },
     {
       icon: <ShieldCheck className="w-12 h-12 text-brand-gold" />,
-      title: "Quality Policy",
-      desc: "Providing services that help achieve the best distinctive performance standards in accordance with international standards."
+      title: t('about.qualityTitle'),
+      desc: t('about.qualityDesc')
     }
   ];
 
@@ -46,16 +49,16 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="section-title">About Us</h2>
+            <h2 className="section-title">{t('about.title')}</h2>
             <h3 className="text-4xl font-heading font-extrabold text-brand-navy mb-8 mt-6 leading-snug">
-              Professionally Managed Contracting & Industrial Supplies
+              {t('about.subtitle')}
             </h3>
             <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-              Saris Contracting is managed by a highly qualified, motivated, and experienced team to cope with the fast development of this Kingdom.
+              {t('about.desc')}
             </p>
-            <div className="p-8 bg-[#F5F5F5] border-l-4 border-brand-gold rounded-r-xl shadow-sm">
+            <div className="p-8 bg-[#F5F5F5] border-l-4 border-brand-gold rounded-r-xl shadow-sm rtl:border-l-0 rtl:border-r-4 rtl:rounded-r-none rtl:rounded-l-xl">
               <p className="text-brand-navy italic text-lg leading-relaxed font-semibold">
-                "We aim at bestowing the coming generation a wider, broader and a stronger base to provide better opportunities, innovation and standards of life."
+                {t('about.quote')}
               </p>
             </div>
           </motion.div>
@@ -78,9 +81,9 @@ const About = () => {
             </div>
             
             {/* Stat Card Overlapping */}
-            <div className="absolute -bottom-8 -left-8 bg-brand-gold text-brand-navy p-10 rounded-2xl shadow-2xl border-4 border-white hidden md:block z-20 transform lg:rotate-3">
+            <div className="absolute -bottom-8 -left-8 bg-brand-gold text-brand-navy p-10 rounded-2xl shadow-2xl border-4 border-white hidden md:block z-20 transform lg:rotate-3 rtl:-left-auto rtl:-right-8">
               <div className="text-5xl font-black font-heading mb-2">10+</div>
-              <div className="uppercase tracking-widest text-sm font-bold text-brand-navy/80">Years of<br/>Excellence</div>
+              <div className="uppercase tracking-widest text-sm font-bold text-brand-navy/80 whitespace-pre-line">{t('about.years')}</div>
             </div>
           </motion.div>
         </div>
@@ -95,7 +98,7 @@ const About = () => {
           {features.map((feature, idx) => (
             <motion.div key={idx} variants={itemVariants} className="bg-white p-10 rounded-2xl shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <div className="mb-8 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 origin-left">
+              <div className="mb-8 transform group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300 origin-left rtl:origin-right">
                 {feature.icon}
               </div>
               <h4 className="text-2xl font-black font-heading text-brand-navy mb-4">{feature.title}</h4>

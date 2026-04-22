@@ -1,40 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Truck, ShieldAlert } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       icon: <Users className="w-12 h-12 text-brand-gold" />,
-      title: "Skilled Manpower Supply",
-      desc: "A premier organization specialized in manpower supply in Saudi Arabia, committed to quality performance, high integrity, and speed.",
+      title: t('services.s1Title'),
+      desc: t('services.s1Desc'),
       list: [
-        "All Category Engineers",
-        "Instrument Technician, Foreman",
-        "QA/QC Mechanical Inspector",
-        "Civil & Safety Categories"
+        t('services.s1L1'),
+        t('services.s1L2'),
+        t('services.s1L3'),
+        t('services.s1L4')
       ]
     },
     {
       icon: <Truck className="w-12 h-12 text-brand-gold" />,
-      title: "Rental Vehicle & Equipment",
-      desc: "We offer the largest rental fleet with industry-leading availability, inspection, safety training, and certification for your needs.",
+      title: t('services.s2Title'),
+      desc: t('services.s2Desc'),
       list: [
-        "Buses, Coaster, Hiace",
-        "Bobcat, Rigger, JCB",
-        "Excavator, Wheel Loader",
-        "Multiple Boom & Scissor Lifts"
+        t('services.s2L1'),
+        t('services.s2L2'),
+        t('services.s2L3'),
+        t('services.s2L4')
       ]
     },
     {
       icon: <ShieldAlert className="w-12 h-12 text-brand-gold" />,
-      title: "HSE Policy Integration",
-      desc: "Safety practices framed to regulate working conditions. We protect the place of work for each of our employees engaged in construction work.",
+      title: t('services.s3Title'),
+      desc: t('services.s3Desc'),
       list: [
-        "Safe Access and Egress",
-        "Occupational Health Hazard Protection",
-        "International Practice Standards",
-        "Environmental Regulations Manual"
+        t('services.s3L1'),
+        t('services.s3L2'),
+        t('services.s3L3'),
+        t('services.s3L4')
       ]
     }
   ];
@@ -43,9 +46,9 @@ const Services = () => {
     <section id="services" className="section bg-[#F5F5F5] border-b border-gray-200">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="section-title">Services We Provide</h2>
+          <h2 className="section-title">{t('services.title')}</h2>
           <p className="text-slate-600 text-lg mt-8 leading-relaxed">
-            Delivering comprehensive contracting and industrial solutions backed by specialized expertise and a commitment to absolute safety.
+            {t('services.desc')}
           </p>
         </div>
 
@@ -72,7 +75,7 @@ const Services = () => {
                 <ul className="space-y-4 mt-auto pt-8 border-t border-gray-100">
                   {service.list.map((item, i) => (
                     <li key={i} className="flex items-start text-sm text-slate-700 font-medium">
-                      <span className="w-2 h-2 bg-brand-gold rounded-full mr-3 mt-1.5 shrink-0 shadow-sm"></span>
+                      <span className="w-2 h-2 bg-brand-gold rounded-full mr-3 mt-1.5 shrink-0 shadow-sm rtl:mr-0 rtl:ml-3"></span>
                       <span className="leading-relaxed">{item}</span>
                     </li>
                   ))}
