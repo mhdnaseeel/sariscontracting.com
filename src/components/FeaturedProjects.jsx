@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const FeaturedProjects = () => {
   const projects = [
     { title: "Industrial Plant Setup", category: "General Contracting", image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&q=80&w=800" },
-    { title: "Heavy Machinery Fleet", category: "Rental Services", image: "https://images.unsplash.com/photo-1541888086425-d81bb19240f5?auto=format&fit=crop&q=80&w=800" },
+    { title: "Heavy Machinery Fleet", category: "Rental Services", image: "https://images.unsplash.com/photo-1580901369227-308f6f40bdeb?auto=format&fit=crop&q=80&w=800" },
     { title: "Infrastructure Support", category: "Manpower", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800" }
   ];
 
