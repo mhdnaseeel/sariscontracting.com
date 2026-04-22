@@ -18,7 +18,8 @@ const Contact = () => {
     emailjs.sendForm(
       'service_a48qz9b',
       'template_contact_form',
-      formRef.current
+      formRef.current,
+      'm9AVNr2bb0dIeFgwM'
     )
       .then(() => {
         setStatus('success');
@@ -26,7 +27,8 @@ const Contact = () => {
         formRef.current.reset();
         setTimeout(() => setStatus(null), 5000);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('EmailJS Error:', err);
         setStatus('error');
         setSending(false);
         setTimeout(() => setStatus(null), 5000);
