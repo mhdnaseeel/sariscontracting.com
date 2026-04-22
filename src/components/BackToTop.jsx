@@ -33,7 +33,7 @@ const BackToTop = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-[60] w-12 h-12 bg-brand-gold text-brand-navy rounded-full shadow-2xl flex items-center justify-center hover:bg-white hover:text-brand-gold transition-colors group"
+          className="fixed bottom-8 right-8 rtl:right-auto rtl:left-8 z-[60] w-12 h-12 bg-brand-gold text-brand-navy rounded-full shadow-2xl flex items-center justify-center hover:bg-white hover:text-brand-gold transition-colors group"
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
         </motion.button>

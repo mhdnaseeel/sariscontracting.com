@@ -113,7 +113,7 @@ const Navbar = () => {
               className="flex items-center justify-center gap-2 w-full py-3 border-2 border-brand-navy text-brand-navy font-bold uppercase text-sm rounded-md hover:bg-brand-navy hover:text-white transition-colors"
             >
               <Globe className="w-4 h-4" />
-              {language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
+              {language === 'en' ? t('nav.switchAr') : t('nav.switchEn')}
             </button>
             <a href="#contact" className="btn btn-primary w-full text-center" onClick={() => setMobileMenuOpen(false)}>{t('nav.quote')}</a>
           </div>

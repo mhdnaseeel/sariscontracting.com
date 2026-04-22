@@ -100,6 +100,8 @@ export const translations = {
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     'footer.rights': 'All Rights Reserved.',
+    'nav.switchAr': 'Switch to Arabic',
+    'nav.switchEn': 'Switch to English',
   },
   ar: {
     // Navbar
@@ -202,5 +204,7 @@ export const translations = {
     'footer.privacy': 'سياسة الخصوصية',
     'footer.terms': 'شروط الخدمة',
     'footer.rights': 'جميع الحقوق محفوظة.',
+    'nav.switchAr': 'التغيير إلى العربية',
+    'nav.switchEn': 'التغيير إلى الإنجليزية',
   }
 };
