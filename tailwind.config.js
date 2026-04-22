@@ -18,6 +18,20 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Montserrat', 'sans-serif'],
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        ripple: {
+          '0%': { transform: 'scale(1)', opacity: '0.3' },
+          '100%': { transform: 'scale(1.5)', opacity: '0' },
+        }
+      },
+      animation: {
+        shimmer: 'shimmer 3s infinite linear',
+        ripple: 'ripple 2s infinite ease-out',
       }
     },
   },

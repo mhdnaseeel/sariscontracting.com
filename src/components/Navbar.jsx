@@ -26,10 +26,22 @@ const Navbar = () => {
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
-          <img src="/logo.svg" alt="Saris Logo" className="w-10 h-10 object-contain shadow-sm rounded-lg" />
-          <span className={`text-3xl font-heading font-black tracking-tighter ${isScrolled ? 'text-brand-navy' : 'text-white'}`}>
+          <motion.img 
+            initial={{ rotate: -10, scale: 0.8, opacity: 0 }}
+            animate={{ rotate: 0, scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            src="/logo.svg" 
+            alt="Saris Logo" 
+            className="w-10 h-10 object-contain shadow-sm rounded-lg" 
+          />
+          <motion.span 
+            initial={{ x: -20, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className={`text-3xl font-heading font-black tracking-tighter ${isScrolled ? 'text-brand-navy' : 'text-white'}`}
+          >
             SARIS<span className="text-brand-gold">.</span>
-          </span>
+          </motion.span>
         </Link>
 
         {/* Desktop Nav */}

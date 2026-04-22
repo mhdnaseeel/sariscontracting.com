@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import LoadingScreen from './components/LoadingScreen';
 import CustomCursor from './components/CustomCursor';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <LoadingScreen />
         <CustomCursor />
+        <BackToTop />
         <Navbar />
         <main className="flex-grow">
           <Routes>
