@@ -1,0 +1,27 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE192" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#997A15" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Navy Background -->
+  <rect width="120" height="120" rx="24" fill="#0B1F3A" />
+  
+  <!-- Geometric S -->
+  <path d="M85 45 C80 30 50 25 40 40 C30 55 60 60 70 70 C80 80 50 100 35 85" 
+        fill="none" 
+        stroke="url(#gold)" 
+        stroke-width="12" 
+        stroke-linecap="round" />
+        
+  <!-- Construction Motif (Crane/Beam element) -->
+  <path d="M20 20 L40 20 M20 20 L20 100" 
+        fill="none" 
+        stroke="url(#gold)" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        opacity="0.5"/>
+</svg>
