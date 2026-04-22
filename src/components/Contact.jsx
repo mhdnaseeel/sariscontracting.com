@@ -17,7 +17,7 @@ const Contact = () => {
     // eslint-disable-next-line no-undef
     emailjs.sendForm(
       'service_a48qz9b',
-      'template_contact_form',
+      'template_9v1ytug',
       formRef.current,
       'm9AVNr2bb0dIeFgwM'
     )
