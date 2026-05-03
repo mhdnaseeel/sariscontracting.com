@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6 hover:opacity-90 transition-opacity">
               <img src="/logo.svg" alt="Saris Logo" className="w-12 h-12 object-contain rounded-xl shadow-lg border border-white/10" />
-              <span className="text-4xl font-heading font-black tracking-tighter text-white">
+              <span className="text-3xl md:text-4xl font-heading font-black tracking-tighter text-white">
                 SARIS<span className="text-brand-gold">.</span>
               </span>
             </Link>

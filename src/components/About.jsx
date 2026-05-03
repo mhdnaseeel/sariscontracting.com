@@ -50,7 +50,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="section-title">{t('about.title')}</h2>
-            <h3 className="text-4xl font-heading font-extrabold text-brand-navy mb-8 mt-6 leading-snug">
+            <h3 className="text-3xl md:text-4xl font-heading font-extrabold text-brand-navy mb-8 mt-6 leading-snug">
               {t('about.subtitle')}
             </h3>
             <p className="text-slate-600 mb-8 text-lg leading-relaxed">

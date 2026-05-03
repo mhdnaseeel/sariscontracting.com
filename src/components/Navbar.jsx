@@ -41,7 +41,7 @@ const Navbar = () => {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className={`text-3xl font-heading font-black tracking-tighter ${isScrolled ? 'text-brand-navy' : 'text-white'}`}
+            className={`text-2xl md:text-3xl font-heading font-black tracking-tighter ${isScrolled ? 'text-brand-navy' : 'text-white'}`}
           >
             SARIS<span className="text-brand-gold">.</span>
           </motion.span>

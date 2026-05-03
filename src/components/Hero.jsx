@@ -30,7 +30,7 @@ const Hero = () => {
               <span className="uppercase tracking-[0.2em] font-bold text-sm text-brand-gold">{t('hero.badge')}</span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl font-heading font-black leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-heading font-black leading-[1.1] mb-8">
               {t('hero.title1')} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-yellow-200 to-brand-gold bg-[length:200%_auto] animate-shimmer">{t('hero.title2')}</span> <br />
               {t('hero.title3')}
