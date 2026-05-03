@@ -63,7 +63,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-xs uppercase tracking-widest text-brand-gold mb-2">{t('contact.phone')}</h4>
-                    <a href="tel:+966561570997" className="text-xl font-medium hover:text-brand-gold transition-colors">+966 56 157 0997</a>
+                    <a href="tel:+966561570997" dir="ltr" className="text-xl font-medium hover:text-brand-gold transition-colors inline-block">+966 56 157 0997</a>
                   </div>
                 </div>
                 
@@ -78,7 +78,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-xs uppercase tracking-widest text-brand-gold mb-2">{t('contact.email')}</h4>
-                    <a href="mailto:Info@sariscontracting.com" className="text-xl font-medium hover:text-brand-gold transition-colors break-all">Info@sariscontracting.com</a>
+                    <a href="mailto:Info@sariscontracting.com" dir="ltr" className="text-xl font-medium hover:text-brand-gold transition-colors break-all inline-block">Info@sariscontracting.com</a>
                   </div>
                 </div>
                 
