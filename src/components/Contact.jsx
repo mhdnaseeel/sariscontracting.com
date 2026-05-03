@@ -144,7 +144,7 @@ const Contact = () => {
               
               <div>
                 <label className="block text-xs font-bold text-brand-navy uppercase tracking-wider mb-2">{t('contact.emailAddr')}</label>
-                <input type="email" name="email" required className="w-full px-5 py-4 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all shadow-sm rtl:text-right" />
+                <input type="email" name="email" required dir="ltr" className="w-full px-5 py-4 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-gold focus:border-transparent outline-none transition-all shadow-sm rtl:text-right" />
               </div>
               
               <div>
